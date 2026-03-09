@@ -1497,7 +1497,11 @@ canvas{ display:block; }
         <div class="card">
           <div class="card-header">
             <div class="card-title">All Machines</div>
-            <button class="btn btn-primary sm" onclick="toggleForm('form-machine')">+ Add Machine</button>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button class="btn btn-ghost sm" onclick="exportExcel('machines')">📊 Excel</button>
+              <button class="btn btn-ghost sm" onclick="exportPDF('machines')">📄 PDF</button>
+              <button class="btn btn-primary sm" onclick="toggleForm('form-machine')">+ Add Machine</button>
+            </div>
           </div>
           <div class="form-panel" id="form-machine" style="display:none">
             <div class="form-grid">
@@ -1602,7 +1606,7 @@ canvas{ display:block; }
       <!-- ══ PARTS ══ -->
       <div class="panel" id="panel-parts">
         <div class="card">
-          <div class="card-header"><div class="card-title">Part Progress Tracker</div><button class="btn btn-primary sm" onclick="toggleForm('form-parts')">+ Add Part</button></div>
+          <div class="card-header"><div class="card-title">Part Progress Tracker</div><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-ghost sm" onclick="exportExcel('parts')">📊 Excel</button><button class="btn btn-primary sm" onclick="toggleForm('form-parts')">+ Add Part</button></div></div>
           <div class="form-panel" id="form-parts" style="display:none">
             <div class="form-grid">
               <div class="fg"><label>Part Name</label><input id="partName" placeholder="e.g. Shaft Assembly"/></div>
@@ -1625,6 +1629,9 @@ canvas{ display:block; }
         <div class="card">
           <div class="card-header">
             <div><div class="card-title">Sales Records</div><div class="card-sub" id="sales-total" style="margin-top:4px;font-weight:700;color:var(--green)">Total: RM 0.00</div></div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button class="btn btn-ghost sm" onclick="exportExcel('sales')">📊 Excel</button>
+              <button class="btn btn-ghost sm" onclick="exportPDF('sales')">📄 PDF</button>
             <div style="display:flex;gap:8px">
               <button class="btn btn-ghost sm" onclick="exportExcel('sales')">📊 Excel</button>
               <button class="btn btn-ghost sm" onclick="exportPDF('sales')">📄 PDF</button>
@@ -1679,7 +1686,7 @@ canvas{ display:block; }
       <!-- ══ CUSTOMERS ══ -->
       <div class="panel" id="panel-customers">
         <div class="card">
-          <div class="card-header"><div class="card-title">Customer Directory & Item Details</div><button class="btn btn-primary sm" onclick="toggleForm('form-customer')">+ Add Customer</button></div>
+          <div class="card-header"><div class="card-title">Customer Directory & Item Details</div><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-ghost sm" onclick="exportExcel('customers')">📊 Excel</button><button class="btn btn-primary sm" onclick="toggleForm('form-customer')">+ Add Customer</button></div></div>
           <div class="form-panel" id="form-customer" style="display:none">
             <div class="form-grid">
               <div class="fg"><label>Contact Name</label><input id="custName" placeholder="Full name"/></div>
@@ -1700,7 +1707,7 @@ canvas{ display:block; }
       <!-- ══ RESOURCES ══ -->
       <div class="panel" id="panel-resources">
         <div class="card">
-          <div class="card-header"><div class="card-title">Resource Planning</div><button class="btn btn-primary sm" onclick="toggleForm('form-resource')">+ Add Resource</button></div>
+          <div class="card-header"><div class="card-title">Resource Planning</div><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-ghost sm" onclick="exportExcel('resources')">📊 Excel</button><button class="btn btn-primary sm" onclick="toggleForm('form-resource')">+ Add Resource</button></div></div>
           <div class="form-panel" id="form-resource" style="display:none">
             <div class="form-grid">
               <div class="fg"><label>Resource Name</label><input id="resName" placeholder="e.g. Steel Rod Grade A"/></div>
@@ -1722,7 +1729,7 @@ canvas{ display:block; }
       <!-- ══ MFG SCHEDULE ══ -->
       <div class="panel" id="panel-mfgschedule">
         <div class="card">
-          <div class="card-header"><div class="card-title">Manufacturing Schedule</div><button class="btn btn-primary sm" onclick="toggleForm('form-mfg')">+ Schedule Job</button></div>
+          <div class="card-header"><div class="card-title">Manufacturing Schedule</div><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-ghost sm" onclick="exportExcel('mfgsched')">📊 Excel</button><button class="btn btn-primary sm" onclick="toggleForm('form-mfg')">+ Schedule Job</button></div></div>
           <div class="form-panel" id="form-mfg" style="display:none">
             <div class="form-grid3">
               <div class="fg"><label>Job Name</label><input id="mfgJob" placeholder="e.g. Shaft Batch #80"/></div>
